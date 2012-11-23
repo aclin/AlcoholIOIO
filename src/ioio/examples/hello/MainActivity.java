@@ -16,6 +16,8 @@ import java.util.Calendar;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.annotation.SuppressLint;
+import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -28,6 +30,7 @@ import android.hardware.Camera.PictureCallback;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -49,6 +52,7 @@ import android.widget.TextView;
  * the {@link AbstractIOIOActivity} class. For a more advanced use case, see the
  * HelloIOIOPower example.
  */
+@SuppressLint("NewApi")
 public class MainActivity extends AbstractIOIOActivity implements SurfaceHolder.Callback {
 	private final static String TAG = "IOIO";
 	
@@ -600,9 +604,9 @@ public class MainActivity extends AbstractIOIOActivity implements SurfaceHolder.
 			runOnUiThread(new Runnable() { 
 		        public void run() 
 		        {			
-		        	//¨ú±o¥~³¡Àx¦s´CÅéªºª¬ºA
+		        	//ï¿½ï¿½oï¿½~ï¿½ï¿½ï¿½xï¿½sï¿½Cï¿½éªºï¿½ï¿½ï¿½A
 					String state = Environment.getExternalStorageState();
-					//§PÂ_ª¬ºA
+					//ï¿½Pï¿½_ï¿½ï¿½ï¿½A
 					if (Environment.MEDIA_MOUNTED.equals(state)) {
 						storage_state.setText("can written");
 					} else if (Environment.MEDIA_MOUNTED_READ_ONLY.equals(state)) {
