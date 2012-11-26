@@ -54,6 +54,10 @@
             android:noHistory="true"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="ioio.examples.hello.TestActivity"
+            android:label="@string/title_activity_test" >
+        </activity>
     </application>
 
 </manifest>

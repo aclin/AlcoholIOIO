@@ -1,5 +1,6 @@
 package game;
 
+import database.DBHelper;
 import android.app.Activity;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,7 +13,7 @@ public class GameDB {
     private SQLiteDatabase gDB = null;
     
     public GameDB(Activity gActivity){
-		gDBHelper = new GameDBHelper(gActivity);
+		gDBHelper = new DBHelper(gActivity);
 		Log.e(this.getClass().toString(), "new GameDBHelper");
     }
     
